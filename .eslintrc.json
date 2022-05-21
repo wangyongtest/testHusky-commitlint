@@ -47,6 +47,12 @@
       "singleline": "beside",
       "multiline": "below"
     }],
+    "vue/no-template-key":[
+     "error",
+     {
+
+     }
+    ],
     "for-direction":"error",
     "getter-return": "error",
     "no-compare-neg-zero": "error",

@@ -1,6 +1,7 @@
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+    <img ref="aa" class="logo" src="./assets/logo.svg" width="125" height="125" @click="test($event)" />
+    <li v-for="item in lists" :key="item">{{ item }}</li>
 
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
@@ -15,8 +16,14 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue';
 import TheWelcome from './components/TheWelcome.vue';
-const test = 'test eslint commit';
-console.log(test);
+// const test = 'test eslint commit';
+// console.log(test);
+const test = (event) => {
+  console.log(event);
+  const { offsetX = 0, offsetY = 0 } = event;
+  console.log(offsetX, offsetY);
+};
+const lists = [1, 2, 3, 4];
 </script>
 
 <style>
