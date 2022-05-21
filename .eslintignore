@@ -1,3 +1,7 @@
 nodule_modules
 dist
 *.json
+
+# eslint 不检查 svg
+/src/assets
+/src/components/icons

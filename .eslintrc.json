@@ -63,7 +63,7 @@
     "no-extend-native":"error",
     "no-lone-blocks": "error",
     "no-loop-func": "error",
-    "no-magic-numbers": ["error", { "ignore": [1] }] ,
+    "no-magic-numbers": ["error", { "ignore": [0, 1, 2] }] ,
     "no-param-reassign": "error",
     "no-self-compare": "error",
     "no-sequences":"error",
@@ -73,7 +73,7 @@
     "no-shadow": "error",
     "no-use-before-define":"error",
     "max-depth": ["error", 5 ],
-    "max-params": ["error", 3 ], 
+    "max-params": ["error", 3 ],
     "new-cap": "error",
     "prefer-rest-params": "error"
   }
