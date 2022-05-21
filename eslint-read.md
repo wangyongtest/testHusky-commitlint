@@ -31,3 +31,8 @@
     "prefer-rest-params": "error" // 要求使用剩余参数非 arguments
 
 ## eslint-plugin-vue
+
+- eslint-config-standard
+- prettier
+- eslint-config-prettier
+- eslint-plugin-import
