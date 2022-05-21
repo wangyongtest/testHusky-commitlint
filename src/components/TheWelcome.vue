@@ -31,7 +31,9 @@ import SupportIcon from './icons/IconSupport.vue'
     <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>. If you need to test
     your components and web pages, check out
     <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-    <a href="https://docs.cypress.io/guides/component-testing/introduction" target="_blank"
+    <a 
+       href="https://docs.cypress.io/guides/component-testing/introduction" 
+       target="_blank"
       >Cypress Component Testing</a
     >.
 
@@ -60,7 +62,9 @@ import SupportIcon from './icons/IconSupport.vue'
     <template #icon>
       <CommunityIcon />
     </template>
-    <template #heading>Community</template>
+    <template #heading>
+      Community
+    </template>
 
     Got stuck? Ask your question on
     <a target="_blank" href="https://chat.vuejs.org">Vue Land</a>, our official Discord server, or
