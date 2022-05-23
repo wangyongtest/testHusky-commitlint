@@ -34,6 +34,10 @@
     "vite": "^2.9.5",
     "vite-plugin-eslint": "^1.6.1"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+    ],
   "lint-staged": {
     "*.(js| ts| vue|tsx|jsx)": "eslint"
   }

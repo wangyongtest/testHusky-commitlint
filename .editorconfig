@@ -26,7 +26,7 @@ indent_size = 2
 # tab_width = 2
 
 ## shezhi lf、 cr 或者 crlf 来控制如何设置换行符
-end_of_line = lf
+end_of_line = CRLF
 
 ## 设置为 latin1、 utf-8、 utf-8-bom、utf-16be 或者 utf-16be来控制字符集
 charset = utf-8

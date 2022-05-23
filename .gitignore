@@ -26,3 +26,6 @@ coverage
 *.njsproj
 *.sln
 *.sw?
+!.prettierrc.js
+!.stylelintrc.js
+!.eslintrc.js
