@@ -36,3 +36,10 @@
 ```js
 git commit --no-verify -m "xxx"
 ```
+
+5、关联issue号
+[!参考文档](https://thomas.blog.csdn.net/article/details/105821546?spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-105821546-blog-113974769.pc_relevant_antiscanv3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7ERate-1-105821546-blog-113974769.pc_relevant_antiscanv3&utm_relevant_index=2)
+
+- 在github新建一个 issue
+- git commit添加这个 issue号
+- 提交之后会关联这个issue号
