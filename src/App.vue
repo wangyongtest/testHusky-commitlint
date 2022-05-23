@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img ref="aa" class="logo" src="./assets/logo.svg" width="125" height="125" @click="test($event)" />
+    <img ref="imgTag" class="logo" src="./assets/logo.svg" width="125" height="125" @click="test($event)" />
     <li v-for="item in lists" :key="item">{{ item }}</li>
 
     <div class="wrapper">
