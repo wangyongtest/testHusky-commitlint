@@ -1,8 +1,14 @@
 <template>
   <header>
-    <img ref="imgTag" class="logo" src="./assets/logo.svg" width="125" height="125" @click="test($event)" />
+    <img
+      ref="imgTag"
+      class="logo"
+      src="./assets/logo.svg"
+      width="125"
+      height="125"
+      @click="handlerTest($event)"
+    />
     <li v-for="item in lists" :key="item">{{ item }}</li>
-
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
     </div>
@@ -13,21 +19,20 @@
   </main>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue';
-import TheWelcome from './components/TheWelcome.vue';
+<script setup lang="ts">
+import HelloWorld from "./components/HelloWorld.vue";
+import TheWelcome from "./components/TheWelcome.vue";
 // const test = 'test eslint commit';
 // console.log(test);
-const test = (event) => {
+const handlerTest = function (event: MouseEvent): void {
   console.log(event);
-  const { offsetX = 0, offsetY = 0 } = event;
-  console.log(offsetX, offsetY);
 };
-const lists = [1, 2, 3, 4];
+
+const lists = ["1", "2", "3", "4"];
 </script>
 
 <style>
-@import './assets/base.css';
+@import "./assets/base.css";
 
 #app {
   max-width: 1280px;
