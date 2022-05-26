@@ -19,7 +19,7 @@
  *
  **/
 
-const types = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore', 'revert'];
+const types = ['feat', 'fix', 'docs', 'style', 'refactor', 'perf', 'test', 'chore', 'revert', 'build'];
 const maxLength = 120;
 const ruleModule = {
   extends: ['@commitlint/config-conventional'],
