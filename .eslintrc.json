@@ -49,6 +49,7 @@
       "singleline": "beside",
       "multiline": "below"
     }],
+    "init-declarations": "off",
     "vue/comment-directive": "off",
     "vue/no-template-key":"off",
     "for-direction":"error",
@@ -72,7 +73,6 @@
     "no-self-compare": "error",
     "no-sequences":"error",
     "prefer-promise-reject-errors": "error",
-    "init-declarations": "error",
     "no-label-var":"error",
     "no-shadow": "error",
     "no-use-before-define":"error",

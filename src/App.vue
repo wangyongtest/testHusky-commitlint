@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <!-- <header>
     <img
       ref="imgTag"
       class="logo"
@@ -16,19 +16,52 @@
 
   <main>
     <TheWelcome />
-  </main>
+  </main> -->
+  <div id="canvasDom"></div>
 </template>
 
 <script setup lang="ts">
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import TheWelcome from "./components/TheWelcome.vue";
 // const test = 'test eslint commit';
 // console.log(test);
-const handlerTest = function (event: MouseEvent): void {
-  console.log(event);
+// const handlerTest = function (event: MouseEvent): void {
+//   console.log(event);
+// };
+
+// const lists = ["1", "2", "3", "4"];
+
+// canvas 绘制
+import { CreateImg } from "./components/canvas-img";
+import { onMounted } from "vue";
+import { Options } from "./components/types";
+import bgImg from "./assets/01.webp";
+import iconImg from "./assets/02.webp";
+
+const options: Options = {
+  bgColor: "#cccccc",
+  bgImgUrl: bgImg,
+  children: [
+    {
+      icon: iconImg,
+      text: "入口",
+      startX: 0,
+      startY: 100,
+    },
+  ],
+  lines: [],
 };
 
-const lists = ["1", "2", "3", "4"];
+onMounted(() => {
+  const dom: HTMLElement | HTMLSelectElement | null = document.querySelector(
+    "#canvasDom"
+  );
+  console.log(dom);
+  if (dom) {
+    const createCvs = new CreateImg(dom, options);
+    createCvs.init();
+  }
+});
 </script>
 
 <style>

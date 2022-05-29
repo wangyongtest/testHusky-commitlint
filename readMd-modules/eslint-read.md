@@ -100,3 +100,5 @@ rules: {
 'string-quotes': 'double'
 }
 ```
+
+## [eslint参考](http://www.verydoc.net/eslint/00003361.html)
