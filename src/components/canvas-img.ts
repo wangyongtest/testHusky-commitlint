@@ -25,16 +25,18 @@ export class CreateImg {
       y: 0,
       width: this.cvs.width,
       height: this.cvs.height,
+      text,
     });
 
     this.drawImg(iconImg, {
+      text,
       x: startX,
       y: startY,
       width: iconImg.width,
       height: iconImg.height,
     });
-
-    console.log(text);
+    this.setText(text, iconImg.width / 2 / 2, iconImg.height * 2);
+    this.handEvent();
   }
 
   // create cvs
@@ -72,13 +74,48 @@ export class CreateImg {
   }
 
   // 绘制文字
-  setText(text, x, y) {
-    this.cvs.font = 'normal 18pt "楷体"';
-    this.cvs.fillText(text, x, y);
+  setText(text: string, x, y) {
+    this.ctx.font = 'normal 48pt "楷体"';
+    console.log(text, x, y);
+    this.ctx.strokeText(text, x, y);
   }
   // 绘制虚线 实线
   drawLine(startX, startY, lineCfg) {
-    this.cvs.fillStyle = lineCfg.color;
-    this.cvs.fillRect(startX, startY, lineCfg.width, lineCfg.height);
+    this.ctx.fillStyle = lineCfg.color;
+    this.ctx.fillRect(startX, startY, lineCfg.width, lineCfg.height);
+  }
+  // 事件
+  async handEvent() {
+    const { bgImgUrl = '', children } = this.options;
+    const img = await this.loadImg(bgImgUrl);
+    const { icon } = children[0];
+    const iconImg = await this.loadImg(icon);
+    let self = this;
+    this.cvs?.addEventListener('wheel', async (e) => {
+      const { deltaY = 0 } = e;
+      let obj = {
+        x: iconImg.width / 2,
+        y: iconImg.width / 2,
+        width: iconImg.width / 2,
+        height: iconImg.height / 2,
+      };
+      self.ctx.clearRect(0, 0, self.cvs?.width, self.cvs?.height);
+
+      let obj1 = {
+        x: 0,
+        y: 0,
+        width: self.cvs?.clientWidth,
+        height: self.cvs.height,
+      };
+      self.drawImg(img, obj1);
+      if (deltaY < 0) self.drawImg(iconImg, obj);
+
+      // this.drawImg(text, {
+      //   x: startX + 2,
+      //   y: startY + 2,
+      //   width: iconImg.width - 2,
+      //   height: iconImg.height - 2,
+      // });
+    });
   }
 }
