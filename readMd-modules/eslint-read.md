@@ -100,3 +100,5 @@ rules: {
 'string-quotes': 'double'
 }
 ```
+
+## [ts学习](https://github.com/type-challenges/type-challenges/blob/main/package.json)
